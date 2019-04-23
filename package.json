@@ -1,0 +1,25 @@
+{
+  "name": "@diljitvj/tree-traversal",
+  "version": "0.1.0",
+  "description": "Traverse through nested objects with ease.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diljitvj/tree-traversal"
+  },
+  "keywords": [
+    "nested",
+    "objects",
+    "traversal",
+    "find"
+  ],
+  "author": "Diljit VJ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diljitvj/tree-traversal/issues"
+  },
+  "homepage": "https://github.com/diljitvj/tree-traversal#readme"
+}
