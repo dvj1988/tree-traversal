@@ -39,4 +39,6 @@ function findChild(children, searchParam, childrenKey, parents = []) {
   return null;
 }
 
-export { findOne };
+module.exports = {
+  findOne
+};
