@@ -1,11 +1,11 @@
 {
   "name": "@diljitvj/tree-traversal",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Traverse through nested collections with ease.",
-  "main": "build.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
-    "build": "babel index.js --out-file build.js"
+    "build": "babel --out-dir=lib src"
   },
   "repository": {
     "type": "git",
