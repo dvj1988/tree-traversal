@@ -1,4 +1,4 @@
-const { findOne } = require("./build.js");
+const { findOne } = require("./lib/index.js");
 
 test("Invalid data should throw an error", () => {
   const passInvalidDataFn = () => {
@@ -73,10 +73,14 @@ test("find first occurance of object", () => {
       { id: 2, name: "Jane Doe" }
     ];
 
-  expect(findOne(sameObjInSameLevelData, { id: 1, name: "John Doe" })).toEqual([
-    0
-  ]);
   expect(
-    findOne(sameObjInDifferentLevelData, { id: 2, name: "Jane Doe" })
+    findOne(sameObjInSameLevelData, { id: 1, name: "John Doe" }, "children")
+  ).toEqual([0]);
+  expect(
+    findOne(
+      sameObjInDifferentLevelData,
+      { id: 2, name: "Jane Doe" },
+      "children"
+    )
   ).toEqual([1]);
 });
