@@ -1,6 +1,6 @@
 {
   "name": "@diljitvj/tree-traversal",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Traverse through nested collections with ease.",
   "main": "lib/index.js",
   "scripts": {
