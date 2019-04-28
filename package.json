@@ -4,8 +4,9 @@
   "description": "Traverse through nested collections with ease.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest",
-    "build": "babel --out-dir=lib src"
+    "test": "jest --watch",
+    "build": "babel --out-dir=lib src",
+    "coverage": "jest --collectCoverage"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,10 @@
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "jest": "^24.7.1"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/"
+    ]
   }
 }
