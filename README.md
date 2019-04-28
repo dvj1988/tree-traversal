@@ -53,7 +53,7 @@ console.log(findOne(data, { id: 6, name: "Nikola Tesla" }, "children"));
 
 ### API
 
-#### findOne(data, obj, [childrenKey])
+#### findOne(data, obj, childrenKey)
 
 ##### data
 
@@ -117,7 +117,7 @@ console.log(convertToLinkedList(data, ["id", "name"], "children"));
 
 ### API
 
-#### convertToLinkedList(data, uniqueKeys, [childrenKey])
+#### convertToLinkedList(data, uniqueKeys, childrenKey)
 
 ##### data
 
