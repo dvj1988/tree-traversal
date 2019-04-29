@@ -1,6 +1,7 @@
 "use strict";
 import findChild from "./utils/findChild";
 import toLinkedList from "./utils/toLinkedList";
+import findAllChildren from "./utils/findAllChildren";
 /**
  * Returns the First location of the key value pair in the object.
  * @param {Array} data The collection to traverse through.
@@ -64,4 +65,8 @@ function convertToLinkedList(data, uniqueKeys, childrenKey) {
   return toLinkedList(data, uniqueKeys, childrenKey, null);
 }
 
-export { findOne, convertToLinkedList };
+function findAll(data, obj, childrenKey) {
+  return findAllChildren(data, obj, childrenKey, []);
+}
+
+export { findOne, convertToLinkedList, findAll };
