@@ -66,7 +66,7 @@ function convertToLinkedList(data, uniqueKeys, childrenKey) {
 }
 
 function findAll(data, obj, childrenKey) {
-  return findAllChildren(data, obj, childrenKey, []);
+  return findAllChildren(data, obj, childrenKey, [], []);
 }
 
 export { findOne, convertToLinkedList, findAll };
