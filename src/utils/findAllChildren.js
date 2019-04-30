@@ -1,4 +1,4 @@
-function findAll(
+function findAllChildren(
   children,
   searchObj,
   childrenKey,
@@ -21,7 +21,7 @@ function findAll(
     }
 
     if (children[i][childrenKey] && children[i][childrenKey].length > 0) {
-      const newLocations = findAll(
+      const newLocations = findAllChildren(
         children[i][childrenKey],
         searchObj,
         childrenKey,
@@ -37,4 +37,4 @@ function findAll(
   return locations;
 }
 
-export default findAll;
+export default findAllChildren;
