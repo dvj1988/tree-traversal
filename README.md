@@ -1,4 +1,5 @@
 # tree-traversal
+
 > Tree Traversal - Traverse through nested collections with ease.
 
 1 KB _(minified & gzipped)_, one file, and no dependencies.
@@ -17,35 +18,35 @@ $ npm i @diljitvj/tree-traversal
 const { findOne } = require("@diljitvj/tree-traversal");
 
 const data = [
-    {
-      id: 1,
-      name: "John Doe",
-      children: [
-        {
-          id: 2,
-          name: "Jane Doe",
-          children: [
-            {
-              id: 3,
-              name: "Mary Jane",
-              children: [
-                {
-                  id: 4,
-                  name: "Elon Musk",
-                  children: []
-                },
-                {
-                  id: 5,
-                  name: "Graham Bell",
-                  children: [{ id: 6, name: "Nikola Tesla", children: [] }]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ];
+  {
+    id: 1,
+    name: "John Doe",
+    children: [
+      {
+        id: 2,
+        name: "Jane Doe",
+        children: [
+          {
+            id: 3,
+            name: "Mary Jane",
+            children: [
+              {
+                id: 4,
+                name: "Elon Musk",
+                children: []
+              },
+              {
+                id: 5,
+                name: "Graham Bell",
+                children: [{ id: 6, name: "Nikola Tesla", children: [] }]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+];
 
 console.log(findOne(data, { id: 6, name: "Nikola Tesla" }, "children"));
 //=> [ 0, 0, 0, 1, 0 ]
@@ -68,6 +69,7 @@ Type: `Object`
 Type: `String`
 
 ---
+
 ## 2. convertToLinkedList
 
 ```js
@@ -115,17 +117,59 @@ console.log(convertToLinkedList(data, ["id", "name"], "children"));
 ];
 ```
 
+---
+
+## 3. findAll
+
+```js
+const { findAll } = require("@diljitvj/tree-traversal");
+
+const data = [
+  {
+    id: 1,
+    name: "John Doe",
+    children: [
+      {
+        id: 2,
+        name: "Jane Doe",
+        children: [
+          {
+            id: 3,
+            name: "Mary Jane",
+            children: [
+              {
+                id: 4,
+                name: "Elon Musk",
+                children: [{ id: 6, name: "Nikola Tesla", children: [] }]
+              },
+              {
+                id: 5,
+                name: "Graham Bell",
+                children: [{ id: 6, name: "Nikola Tesla", children: [] }]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+];
+
+console.log(ç(data, { id: 6, name: "Nikola Tesla" }, "children"));
+//=>  [ [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0 ] ]
+```
+
 ### API
 
-#### convertToLinkedList(data, uniqueKeys, childrenKey)
+#### √(data, obj, childrenKey)
 
 ##### data
 
 Type: `Array<Object>`
 
-##### uniqueKeys
+##### obj
 
-Type: `Array<String>`
+Type: `Object`
 
 ##### childrenKey
 
