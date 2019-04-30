@@ -155,13 +155,13 @@ const data = [
   }
 ];
 
-console.log(ç(data, { id: 6, name: "Nikola Tesla" }, "children"));
+console.log(findAll(data, { id: 6, name: "Nikola Tesla" }, "children"));
 //=>  [ [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0 ] ]
 ```
 
 ### API
 
-#### √(data, obj, childrenKey)
+#### findAll(data, obj, childrenKey)
 
 ##### data
 
