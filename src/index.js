@@ -66,6 +66,21 @@ function convertToLinkedList(data, uniqueKeys, childrenKey) {
 }
 
 function findAll(data, obj, childrenKey) {
+  if (!Array.isArray(data))
+    throw new TypeError(
+      "Input data is not an an iterable collection. Expected an array"
+    );
+
+  if (!obj || Object.keys(obj).length === 0)
+    throw new TypeError(
+      "Input obj is not valid. Expected an object with key value pairs. eg. { id: 1, name : 'John Doe' }"
+    );
+
+  if (!childrenKey || typeof childrenKey !== "string") {
+    throw new TypeError(
+      "Expected a string value for children key. eg. In the obj { id: 1, name : 'John Doe', friends: [ ... ] } => friends would be the children key."
+    );
+  }
   return findAllChildren(data, obj, childrenKey, [], []);
 }
 
